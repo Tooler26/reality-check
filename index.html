@@ -3,20 +3,40 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TOOLER Soccer Hub</title>
+    <title>Ktj Soccer Hub</title>
     <style>
-        body { font-family: sans-serif; background: #1a1a1a; color: white; text-align: center; }
-        .container { max-width: 800px; margin: auto; padding: 20px; }
-        .video-container { background: #000; aspect-ratio: 16 / 9; display: flex; align-items: center; justify-content: center; border: 2px solid #333; }
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background: #0f0f0f; color: white; margin: 0; padding: 0; }
+        header { background: #1f1f1f; padding: 1rem; border-bottom: 3px solid #2ecc71; }
+        .container { max-width: 1000px; margin: 20px auto; padding: 0 20px; }
+        
+        /* The Video Box */
+        .video-box { background: #000; width: 100%; aspect-ratio: 16 / 9; border-radius: 8px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.5); }
+        iframe { width: 100%; height: 100%; border: none; }
+
+        /* Score Widget Area */
+        .score-board { margin-top: 20px; background: #1f1f1f; padding: 15px; border-radius: 8px; }
+        .status-tag { background: #e74c3c; color: white; padding: 4px 8px; border-radius: 4px; font-size: 0.8rem; font-weight: bold; text-transform: uppercase; }
     </style>
 </head>
 <body>
-    <div class="container">
-        <h1>Live Match Stream</h1>
-        <div class="video-container">
-            <p>Stream will appear here</p>
-        </div>
-        <p>Live Scores & Updates</p>
+
+<header>
+    <h1>⚽ SoccerLive<span style="color: #2ecc71;">Hub</span></h1>
+</header>
+
+<div class="container">
+    <div class="video-box">
+        <iframe src="https://www.youtube.com/embed/live_stream?channel=YOUR_FAVORITE_SPORTS_CHANNEL" 
+                allowfullscreen></iframe>
     </div>
+
+    <div class="score-board">
+        <h3><span class="status-tag">Live</span> Match Statistics</h3>
+        <div id="score-container">
+            <p>Loading live scores...</p>
+            </div>
+    </div>
+</div>
+
 </body>
 </html>
